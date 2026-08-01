@@ -15,19 +15,24 @@
 //    - A controlled <input> bound to `title` state (`task-input`), with placeholder "Enter a new task...".
 //    - A submit <button> ("Add Task").
 //    - If `error` prop exists, render a <p> element with class `error-banner` displaying `error`.
-export default function TaskInput() {
+export default function TaskInput({ onAddTask, error }) {
   return (
     <div className="task-form-container flex  justify-between p-4 rounded-md">
       <div className="task-input-container flex-1 mr-2">
         <input
           type="text"
           placeholder="Add a new task..."
-          className="task-input border w-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="border w-xl p-2 rounded-md"
         />
       </div>
 
       <div>
-        <button type="submit">Add Task</button>
+        <button
+          type="submit"
+          className="bg-[#2196f3] text-white px-4 py-2 rounded-md hover:bg-[#1976d2] w-full hover:shadow-md transition duration-300 hover:cursor-pointer hover:scale-105"
+        >
+          Add Task
+        </button>
       </div>
     </div>
   );
