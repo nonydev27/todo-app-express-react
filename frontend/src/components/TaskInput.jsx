@@ -22,7 +22,7 @@ export default function TaskInput({ onAddTask, error }) {
         <input
           type="text"
           placeholder="Add a new task..."
-          className="border w-xl p-2 rounded-md"
+          className="border w-full p-2 rounded-md outline:none focus:shadow-md focus:scale-102 transition duration-300"
         />
       </div>
 
