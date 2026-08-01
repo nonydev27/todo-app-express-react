@@ -17,8 +17,18 @@
 //    - If `error` prop exists, render a <p> element with class `error-banner` displaying `error`.
 export default function TaskInput() {
   return (
-    <div>
-      <input type="text" placeholder="Add a new task..." />
+    <div className="task-form-container flex  justify-between p-4 rounded-md">
+      <div className="task-input-container flex-1 mr-2">
+        <input
+          type="text"
+          placeholder="Add a new task..."
+          className="task-input border w-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div>
+        <button type="submit">Add Task</button>
+      </div>
     </div>
   );
 }

@@ -13,9 +13,9 @@
 
 export default function Header({ completedTasks, totalTasks }) {
   return (
-    <div className="header">
+    <div className="header flex justify-between items-center p-4 shadow-md">
       <div className="header-left">
-        <h1 className="title">Task Tracker</h1>
+        <h1 className="title text-3xl font-bold">Task Tracker</h1>
         <p className="subtitle">
           Organize your tasks efficiently and stay productive!
         </p>
