@@ -1,3 +1,21 @@
+/* ==========================================
+   STYLING GUIDELINES & SELECTORS TO CREATE
+   ==========================================
+   1. Global reset (*): border-box, reset margin/padding.
+   2. body: Centered layout (display: flex), light grey background (#f8fafc), flex-center horizontally and vertically.
+   3. .app-card: White background (#ffffff), max-width (680px), rounded corners (16px border-radius), border, subtle box-shadow, padding (32px).
+   4. .header-top: Flex row with space-between alignment.
+   5. .stats-badge: Pill shape (border-radius: 9999px), light blue background (#eff6ff), blue text (#2563eb).
+   6. .task-input: Full flex-1, rounded border, focus state highlight.
+   7. .add-btn: Solid blue button (#1d4ed8), hover transition.
+   8. .filter-tabs: Segmented container with light grey background (#f1f5f9), padding 4px, rounded corners.
+   9. .tab-btn: Transparent by default. When .active class is applied: solid blue background (#2563eb) and white text.
+   10. .task-list & .task-item: Clean list rows with light borders, hover state, flexbox alignment.
+   11. .custom-check: Circle shape (width/height 22px, 50% border-radius). When .completed class is applied: green background (#22c55e).
+   12. .task-text.completed: Strikethrough text-decoration and muted text color (#94a3b8).
+   13. .delete-btn: Muted color by default, turns red with red background on hover.
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;

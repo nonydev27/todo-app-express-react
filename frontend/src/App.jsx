@@ -1,11 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// ==========================================
+// MAIN CONTAINER: App
+// ==========================================
+// 1. Imports:
+//    - React hooks: useState, useEffect
+//    - Child components: Header, TaskInput, TaskFilter, TaskList
+// 2. State management:
+//    - `todos` (array)
+//    - `filter` (string: "all", "pending", "completed")
+//    - `error` (string)
+//    - `loading` (boolean)
+// 3. API Handlers:
+//    - `useEffect` hook: call `fetchTodos()` on initial load.
+//    - `fetchTodos()`: GET request to `/api/todos`, set `todos` state.
+//    - `handleAddTask(title)`: POST request to `/api/todos` with body `{ title }`. Update `todos` state or display error.
+//    - `handleToggle(id, currentCompleted)`: PUT request to `/api/todos/:id` with `{ completed: !currentCompleted }`. Update item in `todos` state.
+//    - `handleDelete(id)`: DELETE request to `/api/todos/:id`. Filter out deleted task from `todos` state.
+// 4. Derived Data calculations:
+//    - Filter `todos` based on `filter` state ("all", "pending", "completed").
+//    - Calculate `completedCount` by filtering completed items.
+// 5. Return JSX:
+//    - Outer card wrapper (`app-card`).
+//    - `<Header completedCount={completedCount} totalCount={todos.length} />`
+//    - `<TaskInput onAddTask={handleAddTask} error={error} />`
+//    - `<TaskFilter currentFilter={filter} onFilterChange={setFilter} />`
+//    - `<TaskList todos={filteredTodos} loading={loading} onToggle={handleToggle} onDelete={handleDelete} />`
+//    - Footer quote div ("Keep going! You've got this. 🚀").
+
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -116,7 +144,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
