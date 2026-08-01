@@ -22,10 +22,16 @@
 @theme {
   --font-sans: "Freeman", system-ui, sans-serif;
   --font-display: "Barriecito", system-ui, cursive;
+
+  /* Custom Color Palette */
+  --color-brand-dark: #0d47a1;
+  --color-brand-primary: #2196f3;
+  --color-brand-light: #e3f2fd;
 }
 
 body {
   font-family: var(--font-sans);
+  background-color: #f8fafc;
   font-weight: 400;
   font-style: normal;
 }
