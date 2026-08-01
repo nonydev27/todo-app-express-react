@@ -12,12 +12,19 @@
 //      - `onClick`: call `onFilterChange(filter)`.
 //      - Display capitalized filter label (e.g., "All", "Pending", "Completed").
 
-export default function TaskFilter() {
+export default function TaskFilter({ currentFilter, onFilterChange }) {
+  const filter = ["all", "pending", "completed"];
   return (
     <div>
-      <button>All</button>
-      <button>Active</button>
-      <button>Completed</button>
+      {filter.map((filter) => (
+        <button
+          key={filter}
+          className={`px-4 py-2 rounded-md ${currentFilter === filter ? "bg-[#0076d7] text-white" : "bg-gray-200 text-gray-700"}`}
+          onClick={() => onFilterChange(filter)}
+        >
+          {filter.charAt(0).toUpperCase() + filter.slice(1)}
+        </button>
+      ))}
     </div>
   );
 }
