@@ -15,14 +15,16 @@ export default function Header({ completedTasks, totalTasks }) {
   return (
     <div className="header flex justify-between items-center p-4 shadow-md">
       <div className="header-left">
-        <h1 className="title text-3xl font-bold">Task Tracker</h1>
-        <p className="subtitle">
+        <h1 className="title text-3xl text-[#0d47a1] font-bold">
+          Task Tracker
+        </h1>
+        <p className="subtitle text-[#0d47a1]">
           Organize your tasks efficiently and stay productive!
         </p>
       </div>
 
       <div className="task-stats stats-badge">
-        <p>
+        <p className="text-[#0d47a1]">
           Tasks {completedTasks}/{totalTasks} completed
         </p>
       </div>
