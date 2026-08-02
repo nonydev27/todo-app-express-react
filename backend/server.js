@@ -7,10 +7,18 @@
 // - Initialize Express app (`const app = express()`).
 // - Apply JSON body-parser middleware (`app.use(express.json())`).
 
+const express = require("express");
+const Joi = require("joi");
+
 // STEP 2: In-Memory Database (Sample Data)
 // - Create a mutable `todos` array containing sample task objects:
 //   [{ id: 1, title: "Learn Express REST APIs", completed: true }, ...]
 
+const todos = [
+  { id: 1, title: "Learn Express REST APIs", completed: true },
+  { id: 2, title: "Build a Todo App", completed: false },
+  { id: 3, title: "Test the API Endpoints", completed: false },
+];
 // STEP 3: Joi Validation Schemas
 // - Define `todoSchema` for creation (POST):
 //   - title: string, required, min 3 chars, max 100 chars.
