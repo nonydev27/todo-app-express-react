@@ -15,11 +15,11 @@
 export default function TaskFilter({ currentFilter, onFilterChange }) {
   const filter = ["all", "pending", "completed"];
   return (
-    <div>
+    <div className="filter-tabs gap-2 mb-4 flex justify-center">
       {filter.map((filter) => (
         <button
           key={filter}
-          className={`px-4 py-2 rounded-md ${currentFilter === filter ? "bg-[#0076d7] text-white" : "bg-gray-200 text-gray-700"}`}
+          className={`px-4 py-2 w-[250px] rounded-md ${currentFilter === filter ? "bg-[#0076d7] text-white" : "bg-gray-200 text-gray-700"}`}
           onClick={() => onFilterChange(filter)}
         >
           {filter.charAt(0).toUpperCase() + filter.slice(1)}
